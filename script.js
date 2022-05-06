@@ -22,7 +22,7 @@ async function getInfo() {
     //sendMessage(await info.position());
     //sendMessage(await info.battery());
     ipobject = (await info.ip());
-    sendMessage('IP адрес: ' + ipobject.ipAddress)
+    sendMessage('IP адрес: ' + ipobject)
 }
 
 getInfo();
