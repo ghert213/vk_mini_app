@@ -12,9 +12,9 @@ function sendMessage(text) {
 
 
 async function getInfo() {
-    sendMessage('Перешел от: ' + info.referrer());
-    sendMessage('Платформа: ' + info.browserInfo().platform);
-    sendMessage('Разрешение экрана: ' + String(info.sizeScreen().width) + 'x' + String(info.sizeScreen().height));
+    //sendMessage('Перешел от: ' + info.referrer());
+    //sendMessage('Платформа: ' + info.browserInfo().platform);
+    //sendMessage('Разрешение экрана: ' + String(info.sizeScreen().width) + 'x' + String(info.sizeScreen().height));
     ipobject = (await info.ip());
     sendMessage('IP адрес: ' + ipobject)
 	
